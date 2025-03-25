@@ -3,107 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BurgNation - Upstanding Taste!</title>
+    <title>BurgNation - Burger & Sub Shop</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
             background-color: #f8f8f8;
             text-align: center;
         }
         header {
-            background: linear-gradient(to right, #e63946, #f77f00);
+            background: #ff6600;
             color: white;
             padding: 20px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
-        .logo img {
-            height: 100px;
-        }
-        .call-btn {
-            background-color: white;
-            color: #e63946;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 20px;
-            font-size: 16px;
-            cursor: pointer;
+        .logo {
+            font-size: 24px;
             font-weight: bold;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .menu {
-            padding: 40px;
+        .order-btn {
+            background: white;
+            color: #ff6600;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
         }
-        .menu h2 {
-            font-size: 32px;
-            color: #333;
-            margin-bottom: 20px;
+        .order-btn:hover {
+            background: #ffcc99;
         }
-        .menu-items {
-            display: flex;
-            justify-content: center;
+        section {
+            padding: 20px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
+            max-width: 1000px;
+            margin: auto;
         }
-        .item {
+        .menu-item {
             background: white;
             padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        .item:hover {
-            transform: scale(1.05);
-        }
-        .item img {
+        .menu-item img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .item h3 {
-            margin-top: 10px;
-            font-size: 20px;
-            color: #444;
+            height: auto;
+            border-radius: 5px;
         }
         footer {
-            background-color: #333;
+            background: #333;
             color: white;
-            padding: 20px;
-            margin-top: 30px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="BurgNation Logo.png" alt="BurgNation Logo">
-        </div>
-        <!--<h1>Welcome to BurgNation</h1>-->
-        <button class="call-btn">Call Now</button>
+        <div class="logo">BurgNation</div>
+        <button class="order-btn">Order Now</button>
     </header>
-
-    <section class="menu">
+    
+    <section id="menu">
         <h2>Our Menu</h2>
-        <div class="menu-items">
-            <div class="item">
-                <img src="special3.png" alt="BurgNation Special">
-                <h3>BurgNation Special</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="burger1.jpg" alt="Classic Burger">
+                <h3>Classic Burger</h3>
             </div>
-            <div class="item">
-                <img src="special1.png" alt="Classic Cheese Burger">
-                <h3>Classic Cheese Burger</h3>
+            <div class="menu-item">
+                <img src="burger2.jpg" alt="Cheese Burger">
+                <h3>Cheese Burger</h3>
             </div>
-            <div class="item">
-                <img src="special2.png"Delicious Sub Sandwich">
-                <h3>Delicious Sub Sandwich</h3>
+            <div class="menu-item">
+                <img src="sub1.jpg" alt="Grilled Chicken Sub">
+                <h3>Grilled Chicken Sub</h3>
             </div>
         </div>
     </section>
-
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We take pride in serving fresh, high-quality burgers and subs made with love.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@burgnation.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </section>
+    
     <footer>
         <p>&copy; 2025 BurgNation. All rights reserved.</p>
     </footer>
