@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,9 +25,8 @@
             justify-content: space-between;
             align-items: center;
         }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
+        .logo img {
+            height: 100px;
         }
         .order-btn {
             background: white;
@@ -56,6 +56,10 @@
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+       
+        }
+ 	.menu-item:hover {
+            transform: scale(1.05);
         }
         .menu-item img {
             width: 100%;
@@ -82,33 +86,31 @@
 </head>
 <body>
     <header>
-        <div class="logo">BurgNation</div>
+        <div class="logo">
+            <img src="BurgNation Logo.png" alt="BurgNation Logo">
+        </div>
         <button class="order-btn">Order Now</button>
     </header>
     
     <section id="menu">
-        <h2>Our Menu</h2>
+        <h2> </h2>
         <div class="menu-grid">
             <div class="menu-item">
-                <img src="burger1.jpg" alt="Classic Burger">
-                <h3>Classic Burger</h3>
+                <img src="special3.png" alt="Classic Burger">
+                <h3>BurgNation Special</h3>
             </div>
             <div class="menu-item">
-                <img src="burger2.jpg" alt="Cheese Burger">
-                <h3>Cheese Burger</h3>
+                <img src="special1.png" alt="Cheese Burger">
+                <h3>Classic Cheese Burger</h3>
             </div>
             <div class="menu-item">
-                <img src="sub1.jpg" alt="Grilled Chicken Sub">
-                <h3>Grilled Chicken Sub</h3>
+                <img src="special2.png" alt="Grilled Chicken Sub">
+                <h3>Delicious Sub Sandwich</h3>
             </div>
         </div>
     </section>
     
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We take pride in serving fresh, high-quality burgers and subs made with love.</p>
-    </section>
-    
+       
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Email: contact@burgnation.com</p>
